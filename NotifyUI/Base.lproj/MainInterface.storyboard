@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3EX-aM-ehO">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notification View Controller-->
+        <scene sceneID="0zs-BQ-bvw">
+            <objects>
+                <viewController id="3EX-aM-ehO" customClass="NotificationViewController" customModule="NotifyUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qe8-2d-Wk3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="drL-dG-H2S">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                                <connections>
+                                    <segue destination="JoT-r9-CK4" kind="embed" id="pjN-7A-osp"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="N02-0h-y3c" firstAttribute="bottom" secondItem="drL-dG-H2S" secondAttribute="bottom" priority="999" id="5SN-N0-coa"/>
+                            <constraint firstItem="drL-dG-H2S" firstAttribute="top" secondItem="N02-0h-y3c" secondAttribute="top" id="TN1-lA-VIo"/>
+                            <constraint firstItem="drL-dG-H2S" firstAttribute="leading" secondItem="N02-0h-y3c" secondAttribute="leading" id="oQz-V5-cYZ"/>
+                            <constraint firstItem="N02-0h-y3c" firstAttribute="trailing" secondItem="drL-dG-H2S" secondAttribute="trailing" id="uxy-cm-Fbt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="N02-0h-y3c"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="400"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h4X-br-QMs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-361" y="351"/>
+        </scene>
+        <!--Notify-->
+        <scene sceneID="oZs-M6-Xhg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Notify" id="JoT-r9-CK4" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d7P-Y5-89p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="158" y="322"/>
+        </scene>
+    </scenes>
+</document>
