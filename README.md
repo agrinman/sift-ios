@@ -34,9 +34,11 @@ Sift can answer questions like: are apps tracking me even if I disable analytics
 ## Examples
 Sift shows you what an app is doing by pushing a notification in real-time. Later you can open Sift and create rules for blocking sites.
 
-<img width="200px" src="screens/1.PNG"/>
-<img width="200px" style="display: inline" src="screens/2.PNG"/>
-<img width="200px" src="screens/3.PNG"/>
+<div>    
+    <img width="200px" style="display: inline; margin: 10px;" src="screens/1.PNG"/>
+    <img width="200px" style="display: inline" src="screens/2.PNG"/>
+    <img width="200px" style="display: inline" src="screens/3.PNG"/>
+</div>
 
 ## FAQ
 ### Why isn't Sift on the App Store?
