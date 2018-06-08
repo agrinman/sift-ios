@@ -31,7 +31,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="CyM-I7-McC">
-                                        <rect key="frame" x="175" y="64" width="26" height="32"/>
+                                        <rect key="frame" x="175" y="84" width="26" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="26" id="6Ln-m4-xcx"/>
                                             <constraint firstAttribute="height" constant="32" id="XhR-41-XBf"/>
@@ -50,32 +50,32 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notification-sample" translatesAutoresizingMaskIntoConstraints="NO" id="tFe-gO-OpG">
-                                <rect key="frame" x="75" y="234" width="225" height="80"/>
+                                <rect key="frame" x="75" y="214" width="225" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="ISc-Ee-wMN"/>
                                     <constraint firstAttribute="width" secondItem="tFe-gO-OpG" secondAttribute="height" multiplier="450:160" id="TUb-mY-fnd"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. Open an other app" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qki-A7-J8f">
-                                <rect key="frame" x="20" y="156" width="336" height="24"/>
+                                <rect key="frame" x="20" y="136" width="336" height="24"/>
                                 <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="20"/>
                                 <color key="textColor" red="0.13725490200000001" green="1" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. Watch network activity" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="736-ol-7vi">
-                                <rect key="frame" x="20" y="200" width="336" height="24"/>
+                                <rect key="frame" x="20" y="180" width="336" height="24"/>
                                 <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="20"/>
                                 <color key="textColor" red="0.13725490200000001" green="1" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3. Create rules" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IlP-bJ-y2T">
-                                <rect key="frame" x="20" y="334" width="336" height="24"/>
+                                <rect key="frame" x="20" y="314" width="336" height="24"/>
                                 <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="20"/>
                                 <color key="textColor" red="0.13725490200000001" green="1" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow or deny hosts, whitelist or blacklist apps, and inspect network traffic for all your apps." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZu-9i-VlO">
-                                <rect key="frame" x="22" y="358" width="334" height="58"/>
+                                <rect key="frame" x="22" y="338" width="334" height="58"/>
                                 <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="16"/>
                                 <color key="textColor" red="0.98979491649999995" green="1" blue="0.99625116729999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -104,7 +104,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJW-Wr-ATa">
-                                <rect key="frame" x="159" y="20" width="57.5" height="46"/>
+                                <rect key="frame" x="159" y="40" width="57.5" height="46"/>
                                 <attributedString key="attributedText">
                                     <fragment content="sift">
                                         <attributes>
@@ -135,12 +135,12 @@
                             <constraint firstItem="qTc-Rp-sVM" firstAttribute="width" secondItem="13M-Ya-gHG" secondAttribute="width" id="bUP-JF-tXp"/>
                             <constraint firstItem="IlP-bJ-y2T" firstAttribute="centerX" secondItem="psy-ax-N2G" secondAttribute="centerX" id="e1g-vB-mWN"/>
                             <constraint firstItem="736-ol-7vi" firstAttribute="leading" secondItem="Qki-A7-J8f" secondAttribute="leading" id="gXA-vU-SK4"/>
-                            <constraint firstItem="WJW-Wr-ATa" firstAttribute="top" secondItem="13M-Ya-gHG" secondAttribute="top" constant="20" id="iwB-hZ-YWo"/>
+                            <constraint firstItem="WJW-Wr-ATa" firstAttribute="top" secondItem="13M-Ya-gHG" secondAttribute="top" constant="40" id="iwB-hZ-YWo"/>
                             <constraint firstItem="CyM-I7-McC" firstAttribute="top" secondItem="WJW-Wr-ATa" secondAttribute="bottom" constant="-2" id="lJY-ca-G4p"/>
                             <constraint firstItem="IlP-bJ-y2T" firstAttribute="leading" secondItem="736-ol-7vi" secondAttribute="leading" id="s0n-1s-EnV"/>
                             <constraint firstItem="psy-ax-N2G" firstAttribute="bottom" secondItem="M5v-xf-hly" secondAttribute="bottom" constant="60" id="ssh-Lf-I50"/>
                             <constraint firstItem="CyM-I7-McC" firstAttribute="centerX" secondItem="WJW-Wr-ATa" secondAttribute="centerX" id="v84-7C-Omd"/>
-                            <constraint firstItem="Qki-A7-J8f" firstAttribute="top" secondItem="CyM-I7-McC" secondAttribute="bottom" constant="60" id="wLa-e8-M9X"/>
+                            <constraint firstItem="Qki-A7-J8f" firstAttribute="top" secondItem="CyM-I7-McC" secondAttribute="bottom" constant="20" id="wLa-e8-M9X"/>
                             <constraint firstItem="gZu-9i-VlO" firstAttribute="trailing" secondItem="IlP-bJ-y2T" secondAttribute="trailing" id="ylV-mU-VIO"/>
                             <constraint firstItem="tFe-gO-OpG" firstAttribute="top" secondItem="736-ol-7vi" secondAttribute="bottom" constant="10" id="zGx-zH-Ki3"/>
                         </constraints>
@@ -163,20 +163,20 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="get started in just a few steps" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eH3-LJ-oph">
-                                        <rect key="frame" x="20" y="156" width="335" height="26.5"/>
+                                        <rect key="frame" x="20" y="136" width="335" height="26.5"/>
                                         <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="22"/>
                                         <color key="textColor" red="0.13725490200000001" green="1" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="q0n-HD-BqE">
-                                        <rect key="frame" x="175" y="64" width="26" height="32"/>
+                                        <rect key="frame" x="175" y="84" width="26" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="98r-US-nKS"/>
                                             <constraint firstAttribute="width" constant="26" id="BUd-hY-ttV"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2i-Bb-4ds">
-                                        <rect key="frame" x="159" y="20" width="57.5" height="46"/>
+                                        <rect key="frame" x="159" y="40" width="57.5" height="46"/>
                                         <attributedString key="attributedText">
                                             <fragment content="sift">
                                                 <attributes>
@@ -192,11 +192,11 @@
                                 <color key="backgroundColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="F2i-Bb-4ds" firstAttribute="centerX" secondItem="fRv-AF-rJM" secondAttribute="centerX" id="CTs-vT-cgB"/>
-                                    <constraint firstItem="F2i-Bb-4ds" firstAttribute="top" secondItem="fRv-AF-rJM" secondAttribute="top" constant="20" id="OUX-GR-upw"/>
+                                    <constraint firstItem="F2i-Bb-4ds" firstAttribute="top" secondItem="fRv-AF-rJM" secondAttribute="top" constant="40" id="OUX-GR-upw"/>
                                     <constraint firstItem="q0n-HD-BqE" firstAttribute="top" secondItem="F2i-Bb-4ds" secondAttribute="bottom" constant="-2" id="PLg-B5-cxs"/>
                                     <constraint firstAttribute="trailing" secondItem="eH3-LJ-oph" secondAttribute="trailing" constant="20" id="QdN-Bg-ufq"/>
                                     <constraint firstItem="q0n-HD-BqE" firstAttribute="centerX" secondItem="F2i-Bb-4ds" secondAttribute="centerX" id="hRk-2b-cek"/>
-                                    <constraint firstItem="eH3-LJ-oph" firstAttribute="top" secondItem="q0n-HD-BqE" secondAttribute="bottom" constant="60" id="tU2-cF-zQT"/>
+                                    <constraint firstItem="eH3-LJ-oph" firstAttribute="top" secondItem="q0n-HD-BqE" secondAttribute="bottom" constant="20" id="tU2-cF-zQT"/>
                                     <constraint firstItem="eH3-LJ-oph" firstAttribute="leading" secondItem="fRv-AF-rJM" secondAttribute="leading" constant="20" id="y7q-Pe-nBW"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
