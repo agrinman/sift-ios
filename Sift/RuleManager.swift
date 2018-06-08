@@ -62,6 +62,31 @@ extension DataRule {
     
 }
 
+extension DataWildCard {
+    func toWildcard() throws -> Wildcard {
+        guard let app = app
+        else {
+            throw RuleManager.Errors.missingObjectField
+        }
+        
+        return Wildcard(app: app, isAllowed: isAllowed)
+    }
+    
+    convenience init(wildcard:Wildcard, helper context:NSManagedObjectContext) {
+        self.init(helper: context)
+        
+        self.isAllowed = wildcard.isAllowed
+        self.app = wildcard.app
+    }
+    
+    convenience init(helper context: NSManagedObjectContext) {
+        //workaround: https://stackoverflow.com/questions/6946798/core-data-store-cannot-hold-instances-of-entity-cocoa-error-134020
+        self.init(entity: NSEntityDescription.entity(forEntityName: "DataWildCard", in: context)!, insertInto: context)
+    }
+    
+}
+
+
 
 class RuleManager {
     
@@ -104,6 +129,7 @@ class RuleManager {
         case createDatabase
         case missingObjectField
         case noSuchRule
+        case ruleAlreadyExists
     }
     
     
@@ -126,6 +152,12 @@ class RuleManager {
     }
     
     func create(rule:Rule) throws  {
+        let (type, value) = rule.ruleType.typeAndValue
+        
+        guard try findDataRule(type: type, value: value) == nil else {
+            throw Errors.ruleAlreadyExists
+        }
+    
         try performAndWait {
             let _ = DataRule(rule: rule, helper: self.managedObjectContext)
         }
@@ -236,7 +268,9 @@ class RuleManager {
         
         // host
         if let host = hostname {
-            let hostTypePred = NSComparisonPredicate(
+            
+            // hostWithApp
+            let hostAppTypePred = NSComparisonPredicate(
                 leftExpression: NSExpression(forKeyPath: #keyPath(DataRule.type)),
                 rightExpression: NSExpression(forConstantValue: app),
                 modifier: .direct,
@@ -244,7 +278,7 @@ class RuleManager {
                 options: NSComparisonPredicate.Options(rawValue: 0)
             )
             
-            let hostValuePred = NSComparisonPredicate(
+            let hostAppValuePred = NSComparisonPredicate(
                 leftExpression: NSExpression(forKeyPath: #keyPath(DataRule.value)),
                 rightExpression: NSExpression(forConstantValue: host),
                 modifier: .direct,
@@ -252,9 +286,31 @@ class RuleManager {
                 options: NSComparisonPredicate.Options(rawValue: 0)
             )
 
-            let hostPred = NSCompoundPredicate(andPredicateWithSubpredicates: [hostTypePred, hostValuePred])
+            let hostAppPred = NSCompoundPredicate(andPredicateWithSubpredicates: [hostAppTypePred, hostAppValuePred])
             
-            orPredicates.append(hostPred)
+            orPredicates.append(hostAppPred)
+
+            // host
+            let hostOnlyTypePred = NSComparisonPredicate(
+                leftExpression: NSExpression(forKeyPath: #keyPath(DataRule.type)),
+                rightExpression: NSExpression(forConstantValue: "host"),
+                modifier: .direct,
+                type: .equalTo,
+                options: NSComparisonPredicate.Options(rawValue: 0)
+            )
+            
+            let hostOnlyValuePred = NSComparisonPredicate(
+                leftExpression: NSExpression(forKeyPath: #keyPath(DataRule.value)),
+                rightExpression: NSExpression(forConstantValue: host),
+                modifier: .direct,
+                type: .equalTo,
+                options: NSComparisonPredicate.Options(rawValue: 0)
+            )
+            
+            let hostOnlyPred = NSCompoundPredicate(andPredicateWithSubpredicates: [hostOnlyTypePred, hostOnlyValuePred])
+
+            
+            orPredicates.append(hostOnlyPred)
         }
         
 

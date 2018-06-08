@@ -34,3 +34,8 @@ extension AppName {
     }
 }
 
+struct Wildcard {
+    let app:AppName
+    let isAllowed:Bool
+}
+

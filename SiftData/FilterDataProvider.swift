@@ -21,20 +21,25 @@ class FilterDataProvider: NEFilterDataProvider {
     }
     
     override func handleNewFlow(_ flow: NEFilterFlow) -> NEFilterNewFlowVerdict {
-        // Add code to determine if the flow should be dropped or not, downloading new rules if required.
-        
-        guard   let app = flow.sourceAppIdentifier
+        guard  let app = flow.sourceAppIdentifier
         else {
-            return .drop()
-        }
-        
-        // temp: return all apple
-        if app.hasPrefix(".com.apple") {
             return .allow()
         }
         
+        let host = flow.getHost()
+        
+        // ignore exceptions
+        if Set(StaticRules.apps).contains(app) {
+            return .allow()
+        }
+        
+        if let host = host, Set(StaticRules.hosts).contains(host) {
+            return .allow()
+        }
+
+        // try to get the rule or ask for an update
         do {
-            guard let rule = try RuleManager().getRule(for: app, hostname: flow.url?.host)
+            guard let rule = try RuleManager().getRule(for: app, hostname: host)
             else {
                 return .needRules()
             }

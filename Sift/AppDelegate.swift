@@ -20,6 +20,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         // Override point for customization after application launch.
         
         UNUserNotificationCenter.current().delegate = self
+        
+        DispatchQueue.main.async {
+            UNUserNotificationCenter.current().getNotificationSettings { settings in
+                if settings.authorizationStatus == .authorized {
+                    UNUserNotificationCenter.current().setNotificationCategories([Notifications.authorizeCategory])
+                }
+            }
+        }
+
+        return true
+    }
+    
+    func registerForNotifications(completion:@escaping ((Error?)->())) {
         DispatchQueue.main.async {
             UNUserNotificationCenter.current().setNotificationCategories([Notifications.authorizeCategory])
             UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .sound, .alert], completionHandler: { (success, error) in
@@ -29,10 +42,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 }
                 
                 print("registered for push: \(success)")
+                completion(error)
             })
-
         }
-        return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -47,10 +59,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+        
+        // clear any notifications
+        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
+        NotificationCenter.default.post(name: Constants.ObservableNotification.appBecameActive.name, object: nil)
     }
 
     func applicationWillTerminate(_ application: UIApplication) {

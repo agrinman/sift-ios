@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="AvenirNext.ttc">
-            <string>AvenirNext-Bold</string>
-        </array>
-        <array key="AvenirNextCondensed.ttc">
-            <string>AvenirNextCondensed-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -27,42 +17,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sift" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J85-mx-6Ne">
-                                <rect key="frame" x="129" y="234" width="118.5" height="109.5"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="80"/>
-                                <color key="textColor" red="0.13725490196078433" green="1" blue="0.80784313725490198" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="built in boston" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o72-To-BmI">
-                                <rect key="frame" x="136.5" y="607.5" width="102" height="27.5"/>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🛠 in boston" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o72-To-BmI">
+                                <rect key="frame" x="115" y="612.5" width="146" height="35"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
                                 <color key="textColor" red="0.13725490200000001" green="1" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="see where your bits are going" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHh-Bb-dNV">
-                                <rect key="frame" x="55" y="343.5" width="267" height="36"/>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="control where your data goes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHh-Bb-dNV">
+                                <rect key="frame" x="40" y="308" width="295" height="71.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Jsv-Fg-mJo">
-                                <rect key="frame" x="174" y="20" width="27" height="36"/>
+                                <rect key="frame" x="174.5" y="151.5" width="26" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="27" id="82A-iX-yli"/>
-                                    <constraint firstAttribute="height" constant="36" id="rab-ao-dde"/>
+                                    <constraint firstAttribute="width" constant="26" id="Avw-uZ-O9v"/>
+                                    <constraint firstAttribute="height" constant="32" id="W9W-P4-cAm"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sift" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J85-mx-6Ne">
+                                <rect key="frame" x="128" y="52" width="119" height="109.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="80"/>
+                                <color key="textColor" red="0.13725490196078433" green="1" blue="0.80784313725490198" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.13725490196078433" green="0.13725490196078433" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="hHh-Bb-dNV" firstAttribute="centerX" secondItem="J85-mx-6Ne" secondAttribute="centerX" id="8Fm-da-ooB"/>
-                            <constraint firstItem="Jsv-Fg-mJo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="KTu-Qu-sJw"/>
-                            <constraint firstItem="J85-mx-6Ne" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="T3A-Ge-z1O"/>
+                            <constraint firstItem="hHh-Bb-dNV" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="8WH-aC-flg"/>
+                            <constraint firstItem="Jsv-Fg-mJo" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JPv-bX-cBI"/>
+                            <constraint firstItem="J85-mx-6Ne" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="MkI-kt-A5k"/>
+                            <constraint firstItem="Jsv-Fg-mJo" firstAttribute="top" secondItem="J85-mx-6Ne" secondAttribute="bottom" constant="-10" id="V5M-mN-rGd"/>
                             <constraint firstItem="o72-To-BmI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Vcd-JE-bsH"/>
-                            <constraint firstItem="hHh-Bb-dNV" firstAttribute="top" secondItem="J85-mx-6Ne" secondAttribute="bottom" id="WXJ-OQ-rxF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="o72-To-BmI" secondAttribute="bottom" constant="32" id="WxS-4z-7xp"/>
-                            <constraint firstItem="Jsv-Fg-mJo" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aaS-CF-m2x"/>
-                            <constraint firstItem="J85-mx-6Ne" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="oS2-i5-mak"/>
+                            <constraint firstItem="hHh-Bb-dNV" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="40" id="VyU-Ae-kf6"/>
+                            <constraint firstItem="J85-mx-6Ne" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="W5J-gO-9Td"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="o72-To-BmI" secondAttribute="bottom" constant="20" id="WxS-4z-7xp"/>
+                            <constraint firstAttribute="trailing" secondItem="hHh-Bb-dNV" secondAttribute="trailing" constant="40" id="kD6-ui-ocK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -73,6 +64,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="270" height="343"/>
+        <image name="logo" width="237" height="294"/>
     </resources>
 </document>

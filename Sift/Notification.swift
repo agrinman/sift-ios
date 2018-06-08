@@ -13,34 +13,33 @@ import UserNotifications
 extension AppDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         
-        
         guard   response.notification.request.content.categoryIdentifier == Constants.notificationCategory,
-                let app = response.notification.request.content.userInfo["app"] as? String,
-                let host = response.notification.request.content.userInfo["host"] as? String
+                let app = response.notification.request.content.userInfo["app"] as? String
         else {
             completionHandler()
             return
         }
         
         var rule:Rule
-        
-        switch response.actionIdentifier {
-        case Constants.notificationAllowIdentifier:
-            rule = Rule(ruleType: .hostFromApp(host: host, app: app), isAllowed: true)
-            
-        case Constants.notificationAllowHostIdentifier:
-            rule = Rule(ruleType: .host(host), isAllowed: true)
-        
-        case Constants.notificationAllowAppIdentifier:
-            rule = Rule(ruleType: .app(app), isAllowed: true)
 
-        case Constants.notificationDenyIdentifier:
-            rule = Rule(ruleType: .hostFromApp(host: host, app: app), isAllowed: false)
+        guard let action = Constants.NotificationAction(rawValue: response.actionIdentifier)
+        else {
+            print("unknown action: \(response.actionIdentifier)")
+            completionHandler()
+            showEditController(for: app)
+            return
+
+        }
+        
+        switch action {
+        case .edit:
+            completionHandler()
+            return
             
-        case Constants.notificationDenyHostIdentifier:
-            rule = Rule(ruleType: .host(host), isAllowed: false)
+        case .allowApp:
+            rule = Rule(ruleType: .app(app), isAllowed: true)
             
-        case Constants.notificationDenyAppIdentifier:
+        case .denyApp:
             rule = Rule(ruleType: .app(app), isAllowed: false)
 
         default:
@@ -51,6 +50,8 @@ extension AppDelegate {
         
         do {
             try RuleManager().create(rule: rule)
+            try NetCache(appIdentifier: app).cache.removeAllObjects()
+            AppDelegate.removeNotifications(for: app)
         } catch {
             print("error saving rule: \(error)")
         }
@@ -59,59 +60,40 @@ extension AppDelegate {
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        
         completionHandler(.alert)
+    }
+    
+    func showEditController(for appIdentifier:String) {
+        NotificationCenter.default.post(name: Constants.ObservableNotification.editAction.name, object: appIdentifier)
+    }
+    
+    static func removeNotifications(for appIdentifier:String) {
+        UNUserNotificationCenter.current().getDeliveredNotifications { notes in
+            let ids = notes.filter { $0.request.content.threadIdentifier == appIdentifier }.map { $0.request.identifier }
+            UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: ids)
+        }
     }
 }
 class Notifications {
     static var authorizeCategory:UNNotificationCategory = {
         return UNNotificationCategory(identifier: Constants.notificationCategory,
-                                      actions: [Notifications.approve,
-                                                Notifications.approveAllHost,
-                                                Notifications.approveAllApp,
-                                                Notifications.deny,
-                                                Notifications.denyAllHost,
+                                      actions: [Notifications.edit,
                                                 Notifications.denyAllApp],
                                       intentIdentifiers: [],
-                                      hiddenPreviewsBodyPlaceholder: "Incoming network request. Tap to allow/deny.",
+                                      hiddenPreviewsBodyPlaceholder: "Incoming network request",
                                       options: .customDismissAction)
     }()
     
     
-    static var approve:UNNotificationAction = {
-        return UNNotificationAction(identifier: Constants.notificationAllowIdentifier,
-                                    title: "Allow this only",
-                                    options: .authenticationRequired)
-    }()
-    
-    static var approveAllHost:UNNotificationAction = {
-        return UNNotificationAction(identifier: Constants.notificationAllowHostIdentifier,
-                                    title: "Allow this host for all apps",
-                                    options: .authenticationRequired)
-    }()
-    
-    static var approveAllApp:UNNotificationAction = {
-        return UNNotificationAction(identifier: Constants.notificationAllowAppIdentifier,
-                                    title: "Whitelist app",
-                                    options: .authenticationRequired)
-    }()
-
-
-    static var deny:UNNotificationAction = {
-        return UNNotificationAction(identifier: Constants.notificationDenyIdentifier,
-                                    title: "Deny for this app",
-                                    options: .destructive)
-    }()
-
-    static var denyAllHost:UNNotificationAction = {
-        return UNNotificationAction(identifier: Constants.notificationDenyHostIdentifier,
-                                    title: "Deny this host for all apps",
-                                    options: .destructive)
+    static var edit:UNNotificationAction = {
+        return UNNotificationAction(identifier: Constants.NotificationAction.edit.id,
+                                    title: "Edit rules",
+                                    options: .foreground)
     }()
     
     static var denyAllApp:UNNotificationAction = {
-        return UNNotificationAction(identifier: Constants.notificationDenyAppIdentifier,
-                                    title: "Blacklist app",
+        return UNNotificationAction(identifier: Constants.NotificationAction.denyApp.id,
+                                    title: "Drop all for this app",
                                     options: .destructive)
     }()
 

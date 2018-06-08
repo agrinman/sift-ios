@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17B1003" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17C88" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="DataRule" representedClassName="DataRule" syncable="YES" codeGenerationType="class">
         <attribute name="isAllowed" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
@@ -11,7 +11,15 @@
             <fetchIndexElement property="type" type="Binary" order="ascending"/>
         </fetchIndex>
     </entity>
+    <entity name="DataWildCard" representedClassName="DataWildCard" syncable="YES" codeGenerationType="class">
+        <attribute name="app" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isAllowed" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <fetchIndex name="byAppIndex">
+            <fetchIndexElement property="app" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
     <elements>
         <element name="DataRule" positionX="-54" positionY="-9" width="128" height="90"/>
+        <element name="DataWildCard" positionX="-54" positionY="18" width="128" height="75"/>
     </elements>
 </model>
