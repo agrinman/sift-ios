@@ -37,7 +37,6 @@
 		FAA2F5A01FEEF7F700FA15C4 /* FiraMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAA2F5881FEEF7F700FA15C4 /* FiraMono-Bold.ttf */; };
 		FAA2F5A41FEEF7F700FA15C4 /* FiraSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAA2F58D1FEEF7F700FA15C4 /* FiraSans-Medium.ttf */; };
 		FAA2F5A61FEEF7F700FA15C4 /* FiraSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAA2F58F1FEEF7F700FA15C4 /* FiraSans-Bold.ttf */; };
-		FAA2F5AD1FEEF7F700FA15C4 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = FAA2F5961FEEF7F700FA15C4 /* OFL.txt */; };
 		FAA2F5B21FEEF7F700FA15C4 /* FiraSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAA2F59B1FEEF7F700FA15C4 /* FiraSans-Regular.ttf */; };
 		FAA2F5B61FEF071100FA15C4 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2F5B51FEF071100FA15C4 /* Rule.swift */; };
 		FAA2F5B71FEF071100FA15C4 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2F5B51FEF071100FA15C4 /* Rule.swift */; };
@@ -464,7 +463,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAA2F5561FEEF25B00FA15C4 /* Build configuration list for PBXNativeTarget "Sift" */;
 			buildPhases = (
-				FAA2F5CC1FEF707100FA15C4 /* Common Crypto */,
 				FAA2F53D1FEEF25B00FA15C4 /* Sources */,
 				FAA2F53E1FEEF25B00FA15C4 /* Frameworks */,
 				FAA2F53F1FEEF25B00FA15C4 /* Resources */,
@@ -487,7 +485,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAA2F56D1FEEF51200FA15C4 /* Build configuration list for PBXNativeTarget "SiftData" */;
 			buildPhases = (
-				FAA2F5CD1FEF711900FA15C4 /* Common Crypto */,
 				FAA2F5601FEEF51100FA15C4 /* Sources */,
 				FAA2F5611FEEF51100FA15C4 /* Frameworks */,
 				FAA2F5621FEEF51100FA15C4 /* Resources */,
@@ -505,7 +502,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAA2F57F1FEEF53100FA15C4 /* Build configuration list for PBXNativeTarget "SiftControl" */;
 			buildPhases = (
-				FAA2F5CE1FEF712800FA15C4 /* Common Crypto */,
 				FAA2F5721FEEF53000FA15C4 /* Sources */,
 				FAA2F5731FEEF53000FA15C4 /* Frameworks */,
 				FAA2F5741FEEF53000FA15C4 /* Resources */,
@@ -652,7 +648,6 @@
 				FAA2F5521FEEF25B00FA15C4 /* LaunchScreen.storyboard in Resources */,
 				FAA2F54F1FEEF25B00FA15C4 /* Assets.xcassets in Resources */,
 				FAA2F59E1FEEF7F700FA15C4 /* FiraMono-Regular.ttf in Resources */,
-				FAA2F5AD1FEEF7F700FA15C4 /* OFL.txt in Resources */,
 				FAA2F5A41FEEF7F700FA15C4 /* FiraSans-Medium.ttf in Resources */,
 				FAA2F5A61FEEF7F700FA15C4 /* FiraSans-Bold.ttf in Resources */,
 				FAA2F54A1FEEF25B00FA15C4 /* Main.storyboard in Resources */,
@@ -677,51 +672,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		FAA2F5CC1FEF707100FA15C4 /* Common Crypto */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Common Crypto";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "modulesDirectory=$DERIVED_FILES_DIR/modules\nmodulesMap=$modulesDirectory/module.modulemap\nmodulesMapTemp=$modulesDirectory/module.modulemap.tmp\n\nmkdir -p \"$modulesDirectory\"\n\ncat > \"$modulesMapTemp\" << MAP\nmodule CommonCrypto [system] {\n    header \"$SDKROOT/usr/include/CommonCrypto/CommonCrypto.h\"\n    export *\n}\nMAP\n\ndiff \"$modulesMapTemp\" \"$modulesMap\" >/dev/null 2>/dev/null\nif [[ $? != 0 ]] ; then\nmv \"$modulesMapTemp\" \"$modulesMap\"\nelse\nrm \"$modulesMapTemp\"\nfi";
-		};
-		FAA2F5CD1FEF711900FA15C4 /* Common Crypto */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Common Crypto";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "modulesDirectory=$DERIVED_FILES_DIR/modules\nmodulesMap=$modulesDirectory/module.modulemap\nmodulesMapTemp=$modulesDirectory/module.modulemap.tmp\n\nmkdir -p \"$modulesDirectory\"\n\ncat > \"$modulesMapTemp\" << MAP\nmodule CommonCrypto [system] {\n    header \"$SDKROOT/usr/include/CommonCrypto/CommonCrypto.h\"\n    export *\n}\nMAP\n\ndiff \"$modulesMapTemp\" \"$modulesMap\" >/dev/null 2>/dev/null\nif [[ $? != 0 ]] ; then\nmv \"$modulesMapTemp\" \"$modulesMap\"\nelse\nrm \"$modulesMapTemp\"\nfi";
-		};
-		FAA2F5CE1FEF712800FA15C4 /* Common Crypto */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Common Crypto";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "modulesDirectory=$DERIVED_FILES_DIR/modules\nmodulesMap=$modulesDirectory/module.modulemap\nmodulesMapTemp=$modulesDirectory/module.modulemap.tmp\n\nmkdir -p \"$modulesDirectory\"\n\ncat > \"$modulesMapTemp\" << MAP\nmodule CommonCrypto [system] {\n    header \"$SDKROOT/usr/include/CommonCrypto/CommonCrypto.h\"\n    export *\n}\nMAP\n\ndiff \"$modulesMapTemp\" \"$modulesMap\" >/dev/null 2>/dev/null\nif [[ $? != 0 ]] ; then\nmv \"$modulesMapTemp\" \"$modulesMap\"\nelse\nrm \"$modulesMapTemp\"\nfi";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FAA2F53D1FEEF25B00FA15C4 /* Sources */ = {
