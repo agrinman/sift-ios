@@ -31,6 +31,13 @@ Sift can answer questions like: are apps tracking me even if I disable analytics
 
 **Sift is completely private** Sift never shares or sends your network traffic data anywhere. Data that Sift collects never leaves your phone.
 
+## Examples
+Sift shows you what an app is doing by pushing a notification in real-time. Later you can open Sift and create rules for blocking sites.
+
+<img width="200px" src="screens/1.PNG"/>
+<img width="200px" style="display: inline" src="screens/2.PNG"/>
+<img width="200px" src="screens/3.PNG"/>
+
 ## FAQ
 ### Why isn't Sift on the App Store?
 It turns it out that network content filters are not permitted for regular app store apps (it only works in supervised device mode). So I decided to release the source code instead -- any donations are greatly appreciated :)
