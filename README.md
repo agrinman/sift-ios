@@ -47,5 +47,9 @@ It turns it out that network content filters are not permitted for regular app s
 ### How do I use it/install it?
 Make sure you have XCode installed. Clone the code, update submodule (`git submodule update --init --recursive`). Open the .xcodeproj, change development team to yours in app and extensions targets, find occurrences of string `in.alexgr.` in project (don't forget extenions!) and replace to your team's identifier. Now you could plug in your iPhone, and hit run. You might have to authorize XCode to deploy to your phone/ sign into iCloud in XCode.
 
+You can find a [step-by-step workthrough in ". docu/HowToInstall/README.md"](./docu/HowToInstall/README.md)
+
+[![](./docu/HowToInstall/imgs/10.png)](./docu/HowToInstall/README.md)
+
 ### Is there XCode 10 support?
 Yep -- just switch to the `xcode-10` branch.
