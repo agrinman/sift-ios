@@ -95,7 +95,7 @@ class RuleManager {
     private var managedObjectContext:NSManagedObjectContext
     
     init() throws {
-        // persistant store coordinator
+        // persistent store coordinator
         guard let directoryURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: Constants.appGroupIdentifier)?.appendingPathComponent("data"),
             let modelURL = Bundle.main.url(forResource:"SiftDataModel", withExtension: "momd"),
             let managedObjectModel = NSManagedObjectModel(contentsOf: modelURL)
@@ -181,7 +181,7 @@ class RuleManager {
 
     
     func deleteAll() throws {
-        // persistant store coordinator
+        // persistent store coordinator
         guard let directoryURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: Constants.appGroupIdentifier)?.appendingPathComponent("data") else {
             return
         }
