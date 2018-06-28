@@ -9,7 +9,7 @@
 import Foundation
 
 struct Constants {
-    static let appGroupIdentifier = "group.in.alexgr.Sift.shared"
+    static let appGroupIdentifier = "group.com.techmyway.Sift.shared"
     static let notificationCategory = "network_request_category"
     static let onboardingKey = "onboarding_key"
     static let pushActivityKey = "push_activity_key"

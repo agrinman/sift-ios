@@ -10,7 +10,7 @@
 	</array>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.in.alexgr.Sift.shared</string>
+		<string>group.com.techmyway.Sift.shared</string>
 	</array>
 	<key>keychain-access-groups</key>
 	<array>

@@ -952,13 +952,16 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Sift/Sift.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C246BC89CJ;
+				DEVELOPMENT_TEAM = D6L87QSKNY;
 				INFOPLIST_FILE = Sift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = in.alexgr.Sift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.techmyway.Sift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -970,13 +973,15 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Sift/Sift.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C246BC89CJ;
+				DEVELOPMENT_TEAM = D6L87QSKNY;
 				INFOPLIST_FILE = Sift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = in.alexgr.Sift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.techmyway.Sift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -987,11 +992,11 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = SiftData/SiftData.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C246BC89CJ;
+				DEVELOPMENT_TEAM = D6L87QSKNY;
 				INFOPLIST_FILE = SiftData/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = in.alexgr.Sift.SiftData;
+				PRODUCT_BUNDLE_IDENTIFIER = com.techmyway.Sift.SiftData;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -1004,11 +1009,11 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = SiftData/SiftData.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C246BC89CJ;
+				DEVELOPMENT_TEAM = D6L87QSKNY;
 				INFOPLIST_FILE = SiftData/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = in.alexgr.Sift.SiftData;
+				PRODUCT_BUNDLE_IDENTIFIER = com.techmyway.Sift.SiftData;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -1021,11 +1026,11 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = SiftControl/SiftControl.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C246BC89CJ;
+				DEVELOPMENT_TEAM = D6L87QSKNY;
 				INFOPLIST_FILE = SiftControl/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = in.alexgr.Sift.SiftControl;
+				PRODUCT_BUNDLE_IDENTIFIER = com.techmyway.Sift.SiftControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -1038,11 +1043,11 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = SiftControl/SiftControl.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C246BC89CJ;
+				DEVELOPMENT_TEAM = D6L87QSKNY;
 				INFOPLIST_FILE = SiftControl/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = in.alexgr.Sift.SiftControl;
+				PRODUCT_BUNDLE_IDENTIFIER = com.techmyway.Sift.SiftControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
