@@ -423,17 +423,16 @@
                                 <constraints>
                                     <constraint firstItem="nhN-eM-KFp" firstAttribute="top" secondItem="a8j-lc-hjg" secondAttribute="bottom" id="0TL-cY-hgg"/>
                                     <constraint firstItem="tZj-I3-Q7v" firstAttribute="width" secondItem="ft4-4b-NV7" secondAttribute="width" id="8Xc-9M-6Ea"/>
+                                    <constraint firstItem="qM2-nI-cId" firstAttribute="centerX" secondItem="rvz-mH-jfx" secondAttribute="centerX" id="AD2-Ic-fmv"/>
                                     <constraint firstItem="ZwW-Jk-vIh" firstAttribute="bottom" secondItem="rvz-mH-jfx" secondAttribute="centerY" constant="-40" id="AIJ-bj-HGE"/>
                                     <constraint firstItem="tZj-I3-Q7v" firstAttribute="centerY" secondItem="ft4-4b-NV7" secondAttribute="centerY" id="AoN-RD-l8r"/>
                                     <constraint firstItem="nhN-eM-KFp" firstAttribute="centerX" secondItem="rvz-mH-jfx" secondAttribute="centerX" id="B2I-zl-1cS"/>
                                     <constraint firstItem="tZj-I3-Q7v" firstAttribute="leading" secondItem="ft4-4b-NV7" secondAttribute="trailing" constant="40" id="D3F-YG-9SC"/>
-                                    <constraint firstAttribute="trailing" secondItem="qM2-nI-cId" secondAttribute="trailing" constant="40" id="EE2-Ii-ENl"/>
                                     <constraint firstItem="ZwW-Jk-vIh" firstAttribute="centerX" secondItem="rvz-mH-jfx" secondAttribute="centerX" id="L6b-C7-PjA"/>
                                     <constraint firstItem="qM2-nI-cId" firstAttribute="top" secondItem="ZwW-Jk-vIh" secondAttribute="bottom" constant="1" id="NpM-5j-DEK"/>
                                     <constraint firstAttribute="trailing" secondItem="tZj-I3-Q7v" secondAttribute="trailing" constant="40" id="Wzv-XO-DNC"/>
                                     <constraint firstItem="ft4-4b-NV7" firstAttribute="leading" secondItem="rvz-mH-jfx" secondAttribute="leading" constant="40" id="djZ-JK-qz6"/>
                                     <constraint firstItem="ft4-4b-NV7" firstAttribute="top" secondItem="qM2-nI-cId" secondAttribute="bottom" constant="40" id="fqI-Y7-FYe"/>
-                                    <constraint firstItem="qM2-nI-cId" firstAttribute="leading" secondItem="rvz-mH-jfx" secondAttribute="leading" constant="40" id="mQd-mW-YGu"/>
                                     <constraint firstAttribute="bottom" secondItem="nhN-eM-KFp" secondAttribute="bottom" constant="40" id="vEt-yj-kPA"/>
                                     <constraint firstItem="a8j-lc-hjg" firstAttribute="centerX" secondItem="rvz-mH-jfx" secondAttribute="centerX" id="zWh-d7-JCu"/>
                                 </constraints>
