@@ -204,8 +204,10 @@ class FilterSettingsController: UITableViewController, UISearchBarDelegate {
             
             newRules.append(("App Rules", appRules))
             newRules.append(("Host Rules", hostRules))
-            
-            self.rules = newRules
+
+            self.rules = newRules.sorted(by: { (r1, r2) -> Bool in
+                return r1.0.commonName.localizedCompare(r2.0.commonName) == .orderedAscending
+            })
             
             DispatchQueue.main.async {
                 if self.rules.count == 2 {
