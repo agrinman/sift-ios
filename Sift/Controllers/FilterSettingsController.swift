@@ -327,7 +327,7 @@ class FilterSettingsController: UITableViewController, UISearchBarDelegate {
 
         return rules[section].1.count
     }
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let rules = isSearching ? filteredRules : self.rules;
         
@@ -434,10 +434,7 @@ class FilterSettingsController: UITableViewController, UISearchBarDelegate {
             
             self.present(alertController, animated: true, completion: nil)
         }
-        
-
     }
-    
 }
 
 class RuleCell:UITableViewCell {
@@ -465,5 +462,4 @@ class RuleCell:UITableViewCell {
             valueLabel.text = host
         }
     }
-    
 }
