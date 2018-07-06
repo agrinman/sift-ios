@@ -266,16 +266,7 @@ class FilterSettingsController: UITableViewController, UISearchBarDelegate {
     }
 
     // MARK: TableView
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        let rules = isSearching ? filteredRules : self.rules
-        
-        if !isSearching && rules.count == 2 {
-            return 1
-        }
-        return rules.count
-    }
-    
-    
+
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         guard let header = view as? UITableViewHeaderFooterView else { return }
         header.textLabel?.textColor = AppColors.background.color
@@ -317,6 +308,16 @@ class FilterSettingsController: UITableViewController, UISearchBarDelegate {
         
         return rules[section].0
     }
+
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        let rules = isSearching ? filteredRules : self.rules
+
+        if !isSearching && rules.count == 2 {
+            return 1
+        }
+        return rules.count
+    }
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let rules = isSearching ? filteredRules : self.rules;
 
