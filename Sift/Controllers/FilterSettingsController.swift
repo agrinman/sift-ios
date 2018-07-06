@@ -292,7 +292,7 @@ class FilterSettingsController: UITableViewController, UISearchBarDelegate {
             return ""
         }
         
-        return rules[section].0.commonName.lowercased()
+        return rules[section].0.commonName
     }
 
     override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
