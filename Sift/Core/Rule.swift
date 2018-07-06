@@ -30,7 +30,9 @@ enum RuleType {
 typealias AppName = String
 extension AppName {    
     var commonName:String {
-        return self.components(separatedBy: ".").last ?? self
+        return Array(self.components(separatedBy: ".").dropFirst(2)).map { (s: String) -> String in
+            s.capitalized
+        }.joined(separator: " ")
     }
 }
 
