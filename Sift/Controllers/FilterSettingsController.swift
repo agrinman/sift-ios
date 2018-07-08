@@ -253,10 +253,7 @@ class FilterSettingsController: UITableViewController, UISearchBarDelegate {
         }
 
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
+
     @IBAction func enableToggled() {
         enabledSwitch.isOn ? enable() : disable()
         enabledLabel.text = enabledSwitch.isOn ? "Enabled" : "Disabled"
