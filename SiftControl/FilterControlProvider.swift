@@ -61,16 +61,6 @@ class FilterControlProvider: NEFilterControlProvider {
     
     func fireNotification(app:String, hostname:String) {
         UNUserNotificationCenter.current().getDeliveredNotifications { notes in
-//            let appNotes = notes.filter {
-//                $0.request.content.threadIdentifier == app
-//            }
-//
-//            let oldNotes = appNotes.filter {
-//                $0.date < Date().addingTimeInterval(-100)
-//            }
-//
-//            UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: oldNotes.map{ $0.request.identifier })
-            
             let content = UNMutableNotificationContent()
             content.categoryIdentifier = Constants.notificationCategory
             content.userInfo = ["app": app, "host": hostname]            
