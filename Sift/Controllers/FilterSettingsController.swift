@@ -162,7 +162,7 @@ class FilterSettingsController: UITableViewController, UISearchBarDelegate {
     @objc func reload() {
         self.loadRules()
     }
-    
+
     @IBAction func unwindToHome(segue:UIStoryboardSegue) {
         self.loadRules()
     }
@@ -186,7 +186,6 @@ class FilterSettingsController: UITableViewController, UISearchBarDelegate {
     func loadRules() {
         do {
             let rulesList = try RuleManager().fetchAll()
-            
             var appHostRules:[String: [Rule]] = [:]
             var appRules:[Rule] = []
             var hostRules:[Rule] = []
