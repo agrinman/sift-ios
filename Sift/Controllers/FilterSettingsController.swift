@@ -384,56 +384,6 @@ class FilterSettingsController: UITableViewController, UISearchBarDelegate {
         
         return actions
     }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let rules = isSearching ? filteredRules : self.rules;
-
-        if !isSearching && rules.count == 2 {
-            return
-        }
-        
-        let rule = rules[indexPath.section].1[indexPath.row]
-        
-        switch rule.ruleType {
-        case .app:
-            return
-        case .host:
-            return
-        case .hostFromApp(let host, let app):
-            let alertController = UIAlertController(title: host, message: "Chose a network rule for this host.", preferredStyle: .actionSheet)
-            
-            if rule.isAllowed {
-                alertController.addAction(UIAlertAction(title: "Drop for \(app.commonName)", style: .destructive, handler: { (action:UIAlertAction) -> Void in
-                    try? RuleManager().toggle(rule: rule)
-                    self.loadRules()
-                }))
-                
-                alertController.addAction(UIAlertAction(title: "Drop for all apps", style: .destructive, handler: { (action:UIAlertAction) -> Void in
-                    try? RuleManager().toggle(rule: rule)
-                    try? RuleManager().create(rule: Rule(ruleType: .host(host), isAllowed: false))
-                    self.loadRules()
-                }))
-            } else {
-                alertController.addAction(UIAlertAction(title: "Allow for \(app.commonName)", style: .destructive, handler: { (action:UIAlertAction) -> Void in
-                    try? RuleManager().toggle(rule: rule)
-                    self.loadRules()
-                }))
-                
-                alertController.addAction(UIAlertAction(title: "Allow for all apps", style: .destructive, handler: { (action:UIAlertAction) -> Void in
-                    try? RuleManager().toggle(rule: rule)
-                    try? RuleManager().create(rule: Rule(ruleType: .host(host), isAllowed: true))
-                    self.loadRules()
-                }))
-            }
-
-            
-            alertController.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: { (action:UIAlertAction) -> Void in
-                
-            }))
-            
-            self.present(alertController, animated: true, completion: nil)
-        }
-    }
 }
 
 class AppNameCell: UITableViewCell {
