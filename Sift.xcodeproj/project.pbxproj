@@ -60,12 +60,8 @@
 		FAA2F5D41FEF71B000FA15C4 /* UniqueID.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2F5D11FEF71B000FA15C4 /* UniqueID.swift */; };
 		FAA2F5D61FEF738C00FA15C4 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2F5D51FEF738C00FA15C4 /* Notification.swift */; };
 		FAA2F5FC1FF569DB00FA15C4 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2F5FB1FF569DB00FA15C4 /* Resources.swift */; };
-		FAA2F6431FF57DCA00FA15C4 /* AwesomeCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA2F63C1FF57DA700FA15C4 /* AwesomeCache.framework */; };
-		FAA2F6441FF57DD500FA15C4 /* AwesomeCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA2F63C1FF57DA700FA15C4 /* AwesomeCache.framework */; };
 		FAA2F6471FF57F9600FA15C4 /* NetCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2F6461FF57F9600FA15C4 /* NetCache.swift */; };
 		FAA2F6481FF57F9600FA15C4 /* NetCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2F6461FF57F9600FA15C4 /* NetCache.swift */; };
-		FAA2F64E1FF594B200FA15C4 /* AwesomeCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA2F63C1FF57DA700FA15C4 /* AwesomeCache.framework */; };
-		FAA2F64F1FF594B200FA15C4 /* AwesomeCache.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FAA2F63C1FF57DA700FA15C4 /* AwesomeCache.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FABDA3C91FFEE1940077C681 /* OnboardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDA3C81FFEE1940077C681 /* OnboardingController.swift */; };
 		FABDA3CB1FFEE8B90077C681 /* StaticRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDA3CA1FFEE8B90077C681 /* StaticRules.swift */; };
 /* End PBXBuildFile section */
@@ -148,7 +144,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FAA2F64F1FF594B200FA15C4 /* AwesomeCache.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,8 +229,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAA2F64E1FF594B200FA15C4 /* AwesomeCache.framework in Frameworks */,
-				FAA2F6431FF57DCA00FA15C4 /* AwesomeCache.framework in Frameworks */,
 				FAA2F55F1FEEF36E00FA15C4 /* NetworkExtension.framework in Frameworks */,
 				EABA84D4084FC7EF878E2FDA /* Pods_Common_Sift.framework in Frameworks */,
 			);
@@ -253,7 +246,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAA2F6441FF57DD500FA15C4 /* AwesomeCache.framework in Frameworks */,
 				FAA2F5821FEEF53C00FA15C4 /* NetworkExtension.framework in Frameworks */,
 				813BD68179BCBA5B7A4BC9CA /* Pods_Common_SiftControl.framework in Frameworks */,
 			);
