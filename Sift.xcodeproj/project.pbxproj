@@ -16,8 +16,6 @@
 		FA68F2701FF85A510042840D /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA68F26E1FF85A510042840D /* Flow.swift */; };
 		FA68F2711FF85A510042840D /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA68F26E1FF85A510042840D /* Flow.swift */; };
 		FA68F2741FF85E190042840D /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA68F2731FF85E190042840D /* Onboarding.storyboard */; };
-		FA68F2751FF85E190042840D /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA68F2731FF85E190042840D /* Onboarding.storyboard */; };
-		FA68F2761FF85E190042840D /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA68F2731FF85E190042840D /* Onboarding.storyboard */; };
 		FA98E6BD20C637C20010643C /* AboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA98E6BC20C637C20010643C /* AboutController.swift */; };
 		FAA2F5451FEEF25B00FA15C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2F5441FEEF25B00FA15C4 /* AppDelegate.swift */; };
 		FAA2F5471FEEF25B00FA15C4 /* FilterSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2F5461FEEF25B00FA15C4 /* FilterSettingsController.swift */; };
@@ -673,7 +671,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA68F2751FF85E190042840D /* Onboarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -681,7 +678,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA68F2761FF85E190042840D /* Onboarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
