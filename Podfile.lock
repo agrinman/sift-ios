@@ -1,0 +1,16 @@
+PODS:
+  - AwesomeCache (5.0)
+
+DEPENDENCIES:
+  - AwesomeCache
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AwesomeCache
+
+SPEC CHECKSUMS:
+  AwesomeCache: d8906955242173357caa0be0214d5e77dec32cc5
+
+PODFILE CHECKSUM: 0454148718931fae0603c5f6a34a8bdcbac46f62
+
+COCOAPODS: 1.5.3
