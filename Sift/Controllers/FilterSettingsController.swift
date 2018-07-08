@@ -277,50 +277,6 @@ class FilterSettingsController: UITableViewController, UISearchBarDelegate {
         self.loadRules()
     }
 
-    // MARK: TableView
-
-    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        guard let header = view as? UITableViewHeaderFooterView else { return }
-        header.textLabel?.textColor = AppColors.background.color
-        header.textLabel?.font = UIFont(name: "FiraSans-Bold", size: 20)
-        header.textLabel?.text = header.textLabel?.text?.capitalized
-    }
-    
-    override func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
-        guard let header = view as? UITableViewHeaderFooterView else { return }
-        header.textLabel?.textColor = AppColors.background.color.withAlphaComponent(0.5)
-        header.textLabel?.font = UIFont(name: "FiraSans-Regular", size: 10)
-    }
-
-    
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let rules = isSearching ? filteredRules : self.rules;
-
-        if !isSearching && rules.count == 2 {
-            return ""
-        }
-        
-        if rules[section].1.isEmpty {
-            return ""
-        }
-        
-        return rules[section].0.commonName
-    }
-
-    override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-        let rules = isSearching ? filteredRules : self.rules;
-
-        if !isSearching && rules.count == 2 {
-            return ""
-        }
-
-        if rules[section].1.isEmpty {
-            return ""
-        }
-        
-        return rules[section].0
-    }
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         let rules = isSearching ? filteredRules : self.rules
 
