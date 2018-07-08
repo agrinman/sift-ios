@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8EAABC7320F260D500F67DB1 /* AppRulesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAABC7220F260D500F67DB1 /* AppRulesController.swift */; };
 		FA0A6B2B20C4A41A00222EF2 /* StaticRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDA3CA1FFEE8B90077C681 /* StaticRules.swift */; };
 		FA0A6B2D20C4A41C00222EF2 /* StaticRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDA3CA1FFEE8B90077C681 /* StaticRules.swift */; };
 		FA68F2661FF84C520042840D /* Mutex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA68F2651FF84C520042840D /* Mutex.swift */; };
@@ -156,6 +157,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8EAABC7220F260D500F67DB1 /* AppRulesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRulesController.swift; sourceTree = "<group>"; };
 		FA68F2651FF84C520042840D /* Mutex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mutex.swift; sourceTree = "<group>"; };
 		FA68F26E1FF85A510042840D /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
 		FA68F2731FF85E190042840D /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
@@ -311,6 +313,7 @@
 			children = (
 				FABDA3C81FFEE1940077C681 /* OnboardingController.swift */,
 				FAA2F5461FEEF25B00FA15C4 /* FilterSettingsController.swift */,
+				8EAABC7220F260D500F67DB1 /* AppRulesController.swift */,
 				FA98E6BC20C637C20010643C /* AboutController.swift */,
 				FAA2F5B91FEF0FB700FA15C4 /* UIViewController+Util.swift */,
 			);
@@ -733,6 +736,7 @@
 				FAA2F5C11FEF1CA100FA15C4 /* RuleManager.swift in Sources */,
 				FAA2F5BA1FEF0FB700FA15C4 /* UIViewController+Util.swift in Sources */,
 				FAA2F5471FEEF25B00FA15C4 /* FilterSettingsController.swift in Sources */,
+				8EAABC7320F260D500F67DB1 /* AppRulesController.swift in Sources */,
 				FA68F2661FF84C520042840D /* Mutex.swift in Sources */,
 				FAA2F5C51FEF6FD100FA15C4 /* Constants.swift in Sources */,
 				FABDA3CB1FFEE8B90077C681 /* StaticRules.swift in Sources */,
