@@ -436,29 +436,7 @@ class FilterSettingsController: UITableViewController, UISearchBarDelegate {
     }
 }
 
-class RuleCell:UITableViewCell {
-    @IBOutlet weak var valueLabel:UILabel!
-    @IBOutlet weak var allowedLabel:UILabel!
-    
-    func set(rule:Rule) {
-        if rule.isAllowed {
-            allowedLabel.text = "Allow"
-            allowedLabel.textColor = AppColors.allow.color
-        } else {
-            allowedLabel.text = "Drop"
-            allowedLabel.textColor = AppColors.deny.color
-        }
-
-        
-        switch rule.ruleType {
-        case .app(let app):
-            valueLabel.text = app
-            
-        case .host(let host):
-            valueLabel.text = host
-            
-        case .hostFromApp(let host, _):
-            valueLabel.text = host
-        }
-    }
+class AppNameCell: UITableViewCell {
+    @IBOutlet weak var appNameLabel:UILabel!
 }
+
