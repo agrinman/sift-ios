@@ -10,7 +10,6 @@ import NetworkExtension
 import UserNotifications
 
 class FilterControlProvider: NEFilterControlProvider {
-    let mutex = Mutex()
     
     override func startFilter(completionHandler: @escaping (Error?) -> Void) {
         // Add code to initialize the filter

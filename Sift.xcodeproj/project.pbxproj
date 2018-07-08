@@ -10,9 +10,6 @@
 		8EAABC7320F260D500F67DB1 /* AppRulesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAABC7220F260D500F67DB1 /* AppRulesController.swift */; };
 		FA0A6B2B20C4A41A00222EF2 /* StaticRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDA3CA1FFEE8B90077C681 /* StaticRules.swift */; };
 		FA0A6B2D20C4A41C00222EF2 /* StaticRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDA3CA1FFEE8B90077C681 /* StaticRules.swift */; };
-		FA68F2661FF84C520042840D /* Mutex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA68F2651FF84C520042840D /* Mutex.swift */; };
-		FA68F2671FF84C520042840D /* Mutex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA68F2651FF84C520042840D /* Mutex.swift */; };
-		FA68F2681FF84C520042840D /* Mutex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA68F2651FF84C520042840D /* Mutex.swift */; };
 		FA68F26F1FF85A510042840D /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA68F26E1FF85A510042840D /* Flow.swift */; };
 		FA68F2701FF85A510042840D /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA68F26E1FF85A510042840D /* Flow.swift */; };
 		FA68F2711FF85A510042840D /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA68F26E1FF85A510042840D /* Flow.swift */; };
@@ -158,7 +155,6 @@
 
 /* Begin PBXFileReference section */
 		8EAABC7220F260D500F67DB1 /* AppRulesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRulesController.swift; sourceTree = "<group>"; };
-		FA68F2651FF84C520042840D /* Mutex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mutex.swift; sourceTree = "<group>"; };
 		FA68F26E1FF85A510042840D /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
 		FA68F2731FF85E190042840D /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		FA98E6BC20C637C20010643C /* AboutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutController.swift; sourceTree = "<group>"; };
@@ -287,7 +283,6 @@
 				FAA2F5C41FEF6FD100FA15C4 /* Constants.swift */,
 				FAA2F5C01FEF1CA100FA15C4 /* RuleManager.swift */,
 				FAA2F5D51FEF738C00FA15C4 /* Notification.swift */,
-				FA68F2651FF84C520042840D /* Mutex.swift */,
 				FAA2F5B41FEF06F100FA15C4 /* Core */,
 				FAA2F55A1FEEF2EE00FA15C4 /* Controllers */,
 				FAA2F5591FEEF2E800FA15C4 /* UX */,
@@ -737,7 +732,6 @@
 				FAA2F5BA1FEF0FB700FA15C4 /* UIViewController+Util.swift in Sources */,
 				FAA2F5471FEEF25B00FA15C4 /* FilterSettingsController.swift in Sources */,
 				8EAABC7320F260D500F67DB1 /* AppRulesController.swift in Sources */,
-				FA68F2661FF84C520042840D /* Mutex.swift in Sources */,
 				FAA2F5C51FEF6FD100FA15C4 /* Constants.swift in Sources */,
 				FABDA3CB1FFEE8B90077C681 /* StaticRules.swift in Sources */,
 				FAA2F6471FF57F9600FA15C4 /* NetCache.swift in Sources */,
@@ -757,7 +751,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAA2F5C61FEF6FD100FA15C4 /* Constants.swift in Sources */,
-				FA68F2671FF84C520042840D /* Mutex.swift in Sources */,
 				FAA2F5671FEEF51200FA15C4 /* FilterDataProvider.swift in Sources */,
 				FA0A6B2D20C4A41C00222EF2 /* StaticRules.swift in Sources */,
 				FAA2F5CA1FEF704900FA15C4 /* SHA256.swift in Sources */,
@@ -783,7 +776,6 @@
 				FA0A6B2B20C4A41A00222EF2 /* StaticRules.swift in Sources */,
 				FAA2F5B81FEF071100FA15C4 /* Rule.swift in Sources */,
 				FAA2F5C31FEF1CA100FA15C4 /* RuleManager.swift in Sources */,
-				FA68F2681FF84C520042840D /* Mutex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
