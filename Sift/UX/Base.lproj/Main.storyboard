@@ -145,7 +145,7 @@
                             </constraints>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="8Dx-4b-bCu">
-                            <rect key="frame" x="0.0" y="754.5" width="375" height="52"/>
+                            <rect key="frame" x="0.0" y="737.5" width="375" height="52"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fc-8S-TsU" customClass="OutlinedButton" customModule="Sift" customModuleProvider="target">
@@ -456,7 +456,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iyl-0K-Uvf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1589.5999999999999" y="177.66116941529236"/>
+            <point key="canvasLocation" x="1614" y="-352"/>
         </scene>
         <!--App Rules Controller-->
         <scene sceneID="eGc-nf-0VA">
