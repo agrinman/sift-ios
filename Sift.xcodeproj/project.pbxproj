@@ -32,12 +32,8 @@
 		FAA2F57E1FEEF53000FA15C4 /* SiftControl.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FAA2F5761FEEF53000FA15C4 /* SiftControl.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FAA2F5821FEEF53C00FA15C4 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA2F55E1FEEF36E00FA15C4 /* NetworkExtension.framework */; };
 		FAA2F59D1FEEF7F700FA15C4 /* FiraMono-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAA2F5851FEEF7F700FA15C4 /* FiraMono-Medium.ttf */; };
-		FAA2F59E1FEEF7F700FA15C4 /* FiraMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAA2F5861FEEF7F700FA15C4 /* FiraMono-Regular.ttf */; };
 		FAA2F59F1FEEF7F700FA15C4 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = FAA2F5871FEEF7F700FA15C4 /* OFL.txt */; };
 		FAA2F5A01FEEF7F700FA15C4 /* FiraMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAA2F5881FEEF7F700FA15C4 /* FiraMono-Bold.ttf */; };
-		FAA2F5A41FEEF7F700FA15C4 /* FiraSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAA2F58D1FEEF7F700FA15C4 /* FiraSans-Medium.ttf */; };
-		FAA2F5A61FEEF7F700FA15C4 /* FiraSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAA2F58F1FEEF7F700FA15C4 /* FiraSans-Bold.ttf */; };
-		FAA2F5AD1FEEF7F700FA15C4 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = FAA2F5961FEEF7F700FA15C4 /* OFL.txt */; };
 		FAA2F5B21FEEF7F700FA15C4 /* FiraSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAA2F59B1FEEF7F700FA15C4 /* FiraSans-Regular.ttf */; };
 		FAA2F5B61FEF071100FA15C4 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2F5B51FEF071100FA15C4 /* Rule.swift */; };
 		FAA2F5B71FEF071100FA15C4 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2F5B51FEF071100FA15C4 /* Rule.swift */; };
@@ -665,15 +661,11 @@
 				FAA2F59F1FEEF7F700FA15C4 /* OFL.txt in Resources */,
 				FAA2F5A01FEEF7F700FA15C4 /* FiraMono-Bold.ttf in Resources */,
 				FAA2F59D1FEEF7F700FA15C4 /* FiraMono-Medium.ttf in Resources */,
+				FAA2F5B21FEEF7F700FA15C4 /* FiraSans-Regular.ttf in Resources */,
 				FA68F2741FF85E190042840D /* Onboarding.storyboard in Resources */,
 				FAA2F5521FEEF25B00FA15C4 /* LaunchScreen.storyboard in Resources */,
 				FAA2F54F1FEEF25B00FA15C4 /* Assets.xcassets in Resources */,
-				FAA2F59E1FEEF7F700FA15C4 /* FiraMono-Regular.ttf in Resources */,
-				FAA2F5AD1FEEF7F700FA15C4 /* OFL.txt in Resources */,
-				FAA2F5A41FEEF7F700FA15C4 /* FiraSans-Medium.ttf in Resources */,
-				FAA2F5A61FEEF7F700FA15C4 /* FiraSans-Bold.ttf in Resources */,
 				FAA2F54A1FEEF25B00FA15C4 /* Main.storyboard in Resources */,
-				FAA2F5B21FEEF7F700FA15C4 /* FiraSans-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
