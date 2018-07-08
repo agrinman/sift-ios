@@ -284,7 +284,7 @@ class FilterSettingsController: UITableViewController, UISearchBarDelegate {
             return 1
         }
 
-        return rules[section].1.count
+        return rules.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
