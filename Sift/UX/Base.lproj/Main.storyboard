@@ -458,6 +458,109 @@
             </objects>
             <point key="canvasLocation" x="1589.5999999999999" y="177.66116941529236"/>
         </scene>
+        <!--App Rules Controller-->
+        <scene sceneID="eGc-nf-0VA">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="dLk-oz-GIq" customClass="AppRulesController" customModule="Sift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="and-6a-zJT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6AW-dc-zMb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.90866156789999997" green="0.9042718985" blue="0.91305123730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="separatorColor" red="0.13725490200000001" green="1" blue="0.80784313730000001" alpha="0.19609135350000001" colorSpace="custom" customColorSpace="displayP3"/>
+                                <inset key="separatorInset" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="h6c-Eg-4RR" userLabel="Reset">
+                                    <rect key="frame" x="0.0" y="134.5" width="375" height="52"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ibe-Rl-wmx" customClass="OutlinedButton" customModule="Sift" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="6" width="335" height="40"/>
+                                            <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="16"/>
+                                            <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                            <state key="normal" title="Reset">
+                                                <color key="titleColor" red="1" green="0.18823529410000001" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" red="1" green="0.18823529410000001" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="4"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="clearAll" destination="WIN-nl-OI1" eventType="touchUpInside" id="h8T-ib-LDs"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Ibe-Rl-wmx" firstAttribute="centerY" secondItem="h6c-Eg-4RR" secondAttribute="centerY" id="0tx-rw-HNa"/>
+                                        <constraint firstAttribute="trailing" secondItem="Ibe-Rl-wmx" secondAttribute="trailing" constant="20" symbolic="YES" id="CkV-qa-w58"/>
+                                        <constraint firstItem="Ibe-Rl-wmx" firstAttribute="leading" secondItem="h6c-Eg-4RR" secondAttribute="leading" constant="20" id="mYm-XB-Bq6"/>
+                                    </constraints>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="RuleCell" rowHeight="61" id="St0-2q-pkm" customClass="RuleCell" customModule="Sift" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="61"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="St0-2q-pkm" id="vAf-ca-qor">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="www.google.com" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="oau-Kw-YJB">
+                                                    <rect key="frame" x="20" y="10" width="290" height="41"/>
+                                                    <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="18"/>
+                                                    <color key="textColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Allow" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdt-WL-aJY">
+                                                    <rect key="frame" x="320" y="22" width="35" height="17"/>
+                                                    <fontDescription key="fontDescription" name="FiraSans-Medium" family="Fira Sans" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.58823529409999997" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="oau-Kw-YJB" secondAttribute="bottom" constant="10" id="1AS-s6-vIY"/>
+                                                <constraint firstAttribute="trailing" secondItem="gdt-WL-aJY" secondAttribute="trailing" constant="20" id="KN0-Vx-CMY"/>
+                                                <constraint firstItem="oau-Kw-YJB" firstAttribute="top" secondItem="vAf-ca-qor" secondAttribute="top" constant="10" id="Nnh-rB-c0H"/>
+                                                <constraint firstItem="gdt-WL-aJY" firstAttribute="centerY" secondItem="vAf-ca-qor" secondAttribute="centerY" id="VwQ-a8-d3S"/>
+                                                <constraint firstItem="oau-Kw-YJB" firstAttribute="centerY" secondItem="vAf-ca-qor" secondAttribute="centerY" id="am9-M7-KtV"/>
+                                                <constraint firstItem="gdt-WL-aJY" firstAttribute="leading" secondItem="oau-Kw-YJB" secondAttribute="trailing" constant="10" id="ktc-CK-2fE"/>
+                                                <constraint firstItem="oau-Kw-YJB" firstAttribute="leading" secondItem="vAf-ca-qor" secondAttribute="leading" constant="20" id="tMo-Gh-Wuu"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="allowedLabel" destination="gdt-WL-aJY" id="hka-Q8-tEF"/>
+                                            <outlet property="valueLabel" destination="oau-Kw-YJB" id="PBd-5V-aES"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="dLk-oz-GIq" id="md6-td-hKz"/>
+                                    <outlet property="delegate" destination="dLk-oz-GIq" id="UbZ-Z8-HFf"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="mfg-Ph-YuR"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0dM-Aj-Nww" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1614" y="328"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="K4A-yj-c2x">
             <objects>
