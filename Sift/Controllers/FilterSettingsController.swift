@@ -294,10 +294,8 @@ class FilterSettingsController: UITableViewController, UISearchBarDelegate {
             return tableView.dequeueReusableCell(withIdentifier: "EmptyRulesCell")!
         }
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RuleCell") as! RuleCell
-        let rule = rules[indexPath.section].1[indexPath.row]
-        cell.set(rule: rule)
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AppNameCell") as! AppNameCell
+        cell.appNameLabel.text = rules[indexPath.row].0.commonName
         return cell
     }
     
