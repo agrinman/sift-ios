@@ -107,7 +107,6 @@ class RuleManager {
         if !FileManager.default.fileExists(atPath: directoryURL.absoluteString) {
             try FileManager.default.createDirectory(at: directoryURL, withIntermediateDirectories: true, attributes: nil)
         }
-        
         let options = [NSMigratePersistentStoresAutomaticallyOption: true,
                        NSInferMappingModelAutomaticallyOption: true]
         
