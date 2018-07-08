@@ -277,15 +277,6 @@ class FilterSettingsController: UITableViewController, UISearchBarDelegate {
         self.loadRules()
     }
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        let rules = isSearching ? filteredRules : self.rules
-
-        if !isSearching && rules.count == 2 {
-            return 1
-        }
-        return rules.count
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let rules = isSearching ? filteredRules : self.rules;
 
