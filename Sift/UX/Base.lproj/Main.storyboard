@@ -268,40 +268,30 @@
                                 </tableViewCellContentView>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="RuleCell" rowHeight="61" id="MtE-r4-acm" customClass="RuleCell" customModule="Sift" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="675.5" width="375" height="61"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="AppNameCell" id="Glf-LE-48X" userLabel="AppNameCell" customClass="AppNameCell" customModule="Sift" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="675.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MtE-r4-acm" id="xcb-Le-kTc">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Glf-LE-48X" id="UEX-H8-gaM">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="www.google.com" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="h65-g0-wdJ">
-                                            <rect key="frame" x="20" y="10" width="290" height="41"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lp6-Ce-2I6" userLabel="AppName">
+                                            <rect key="frame" x="8" y="11" width="359" height="22"/>
                                             <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="18"/>
-                                            <color key="textColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Allow" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sY2-16-l2b">
-                                            <rect key="frame" x="320" y="22" width="35" height="17"/>
-                                            <fontDescription key="fontDescription" name="FiraSans-Medium" family="Fira Sans" pointSize="14"/>
-                                            <color key="textColor" red="0.0" green="0.58823529411764708" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="sY2-16-l2b" firstAttribute="centerY" secondItem="xcb-Le-kTc" secondAttribute="centerY" id="1Bj-OY-K5Z"/>
-                                        <constraint firstItem="h65-g0-wdJ" firstAttribute="centerY" secondItem="xcb-Le-kTc" secondAttribute="centerY" id="39d-Ou-h9U"/>
-                                        <constraint firstItem="sY2-16-l2b" firstAttribute="leading" secondItem="h65-g0-wdJ" secondAttribute="trailing" constant="10" id="6Pb-YY-2XS"/>
-                                        <constraint firstAttribute="trailing" secondItem="sY2-16-l2b" secondAttribute="trailing" constant="20" id="F9u-m0-f8S"/>
-                                        <constraint firstAttribute="bottom" secondItem="h65-g0-wdJ" secondAttribute="bottom" constant="10" id="J4a-QA-9ZJ"/>
-                                        <constraint firstItem="h65-g0-wdJ" firstAttribute="leading" secondItem="xcb-Le-kTc" secondAttribute="leading" constant="20" id="SdK-cA-x5w"/>
-                                        <constraint firstItem="h65-g0-wdJ" firstAttribute="top" secondItem="xcb-Le-kTc" secondAttribute="top" constant="10" id="y2y-cp-lWR"/>
+                                        <constraint firstItem="Lp6-Ce-2I6" firstAttribute="leading" secondItem="UEX-H8-gaM" secondAttribute="leadingMargin" id="BMU-8k-pOp"/>
+                                        <constraint firstItem="Lp6-Ce-2I6" firstAttribute="top" secondItem="UEX-H8-gaM" secondAttribute="topMargin" id="HRi-fu-dZ4"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Lp6-Ce-2I6" secondAttribute="trailing" id="Tfw-Ff-gVn"/>
+                                        <constraint firstItem="Lp6-Ce-2I6" firstAttribute="bottom" secondItem="UEX-H8-gaM" secondAttribute="bottomMargin" id="ggM-qA-5y2"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <outlet property="allowedLabel" destination="sY2-16-l2b" id="ZwS-JC-Csx"/>
-                                    <outlet property="valueLabel" destination="h65-g0-wdJ" id="mFo-f1-Xlg"/>
+                                    <outlet property="appNameLabel" destination="Lp6-Ce-2I6" id="fZg-OH-DwH"/>
                                     <segue destination="dLk-oz-GIq" kind="show" identifier="ShowAppRules" id="v5C-sg-6FX"/>
                                 </connections>
                             </tableViewCell>
