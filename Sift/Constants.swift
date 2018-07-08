@@ -62,13 +62,12 @@ struct Constants {
 }
 
 extension UserDefaults {
-    static var  group:UserDefaults? {
+    static var group:UserDefaults? {
         return UserDefaults(suiteName: Constants.appGroupIdentifier)
     }
 }
 
 func dispatchAfter(delay:Double, task:@escaping ()->Void) {
-    
     let delay = DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
     
     DispatchQueue.main.asyncAfter(deadline: delay) {
