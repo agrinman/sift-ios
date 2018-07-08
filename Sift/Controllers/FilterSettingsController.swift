@@ -168,6 +168,19 @@ class FilterSettingsController: UITableViewController, UISearchBarDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "ShowAppRules") {
+            guard let appNameCell = sender as? AppNameCell,
+                let cellIndex = tableView.indexPath(for: appNameCell)
+                else {
+                    print("Sender is not as expected when showing app rules: \(String(describing: sender))")
+                    return
+            }
+            let shownAppRules = isSearching ? filteredRules : rules
+            let rule: (AppName, [Rule]) = shownAppRules[cellIndex.row]
+            let dest = segue.destination as! AppRulesController
+            dest.appName = rule.0
+            dest.rules = rule.1
+        }
     }
     
     func loadRules() {
