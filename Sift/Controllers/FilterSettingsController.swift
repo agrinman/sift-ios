@@ -294,7 +294,9 @@ class FilterSettingsController: UITableViewController, UISearchBarDelegate {
         }
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "AppNameCell") as! AppNameCell
-        cell.appNameLabel.text = rules[indexPath.row].0.commonName
+        let rule = rules[indexPath.row]
+        cell.appNameLabel.text = rule.0.commonName
+        cell.appIdentifierLabel.text = rule.0.capitalized
         return cell
     }
     
@@ -345,5 +347,6 @@ class FilterSettingsController: UITableViewController, UISearchBarDelegate {
 
 class AppNameCell: UITableViewCell {
     @IBOutlet weak var appNameLabel:UILabel!
+    @IBOutlet weak var appIdentifierLabel:UILabel!
 }
 

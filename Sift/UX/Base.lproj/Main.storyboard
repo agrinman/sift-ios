@@ -7,7 +7,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -146,7 +145,7 @@
                             </constraints>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="8Dx-4b-bCu">
-                            <rect key="frame" x="0.0" y="737.5" width="375" height="52"/>
+                            <rect key="frame" x="0.0" y="753.5" width="375" height="52"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fc-8S-TsU" customClass="OutlinedButton" customModule="Sift" customModuleProvider="target">
@@ -269,29 +268,39 @@
                                 </tableViewCellContentView>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="AppNameCell" id="Glf-LE-48X" userLabel="AppNameCell" customClass="AppNameCell" customModule="Sift" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="675.5" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="AppNameCell" rowHeight="60" id="Glf-LE-48X" userLabel="AppNameCell" customClass="AppNameCell" customModule="Sift" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="675.5" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Glf-LE-48X" id="UEX-H8-gaM">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lp6-Ce-2I6" userLabel="AppName">
-                                            <rect key="frame" x="8" y="11" width="359" height="22"/>
-                                            <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="18"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lp6-Ce-2I6" userLabel="AppName">
+                                            <rect key="frame" x="20" y="5" width="335" height="27"/>
+                                            <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="21"/>
                                             <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="750" text="Identifier" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1S-TC-hV6" userLabel="AppIdentifier">
+                                            <rect key="frame" x="20" y="35" width="335" height="19.5"/>
+                                            <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="16"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Lp6-Ce-2I6" firstAttribute="leading" secondItem="UEX-H8-gaM" secondAttribute="leadingMargin" id="BMU-8k-pOp"/>
-                                        <constraint firstItem="Lp6-Ce-2I6" firstAttribute="top" secondItem="UEX-H8-gaM" secondAttribute="topMargin" id="HRi-fu-dZ4"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="Lp6-Ce-2I6" secondAttribute="trailing" id="Tfw-Ff-gVn"/>
-                                        <constraint firstItem="Lp6-Ce-2I6" firstAttribute="bottom" secondItem="UEX-H8-gaM" secondAttribute="bottomMargin" id="ggM-qA-5y2"/>
+                                        <constraint firstAttribute="trailing" secondItem="M1S-TC-hV6" secondAttribute="trailing" constant="20" id="D9P-MG-z1d"/>
+                                        <constraint firstAttribute="bottom" secondItem="M1S-TC-hV6" secondAttribute="bottom" constant="5" id="Il7-Ei-Oq6"/>
+                                        <constraint firstItem="Lp6-Ce-2I6" firstAttribute="top" secondItem="UEX-H8-gaM" secondAttribute="top" constant="5" id="WJm-2T-sPL"/>
+                                        <constraint firstAttribute="trailing" secondItem="Lp6-Ce-2I6" secondAttribute="trailing" constant="20" id="ciM-GC-g8b"/>
+                                        <constraint firstItem="M1S-TC-hV6" firstAttribute="top" secondItem="Lp6-Ce-2I6" secondAttribute="bottom" constant="3" id="fzD-vg-MOy"/>
+                                        <constraint firstItem="M1S-TC-hV6" firstAttribute="leading" secondItem="UEX-H8-gaM" secondAttribute="leading" constant="20" id="k6a-46-zCB"/>
+                                        <constraint firstItem="Lp6-Ce-2I6" firstAttribute="leading" secondItem="UEX-H8-gaM" secondAttribute="leading" constant="20" id="uhf-2T-BGI"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
+                                    <outlet property="appIdentifierLabel" destination="M1S-TC-hV6" id="qVc-fQ-A7a"/>
                                     <outlet property="appNameLabel" destination="Lp6-Ce-2I6" id="fZg-OH-DwH"/>
                                     <segue destination="dLk-oz-GIq" kind="show" identifier="ShowAppRules" id="v5C-sg-6FX"/>
                                 </connections>
