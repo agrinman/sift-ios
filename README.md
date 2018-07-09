@@ -1,5 +1,33 @@
 <img src="Artwork/rounded_icon.png" width="64" height="64">
 
+# What changed in this fork?
+
+## Not much, but some!
+
+### UI
+
+* Moved to a navigation style presentation where 1st screen shows all apps known to Sift. On choosing an app, all the rules are displayed for the app in another view.
+    * Why? Because when you have a lot of apps, showing them in a single view is overwhelming. Can't reach a rule without search.
+* Apps are now shown in alphabetic order now.
+
+
+### Technical
+
+* Move away from submodules to pods
+* Fix gitignore
+* A lot of whitespace fixes to make code more readable
+
+### Questions unanswered
+
+1. How is the core data holding up?!
+    * Core data is unable to handle write from multiple processes, it isn't designed for that function. Yet, [FilterControlProvider#L43](https://github.com/ayushgoel/sift-ios/blob/master/SiftControl/FilterControlProvider.swift#L43) and at multiple places in [FilterSettingsController](https://github.com/ayushgoel/sift-ios/blob/master/Sift/Controllers/FilterSettingsController.swift#L327) the object graph is modified.
+2. Why are there so many types of rules?!
+    * There are two rules, one an entity in data model and another is the struct Rule.
+    * A single entity type encapsulating an app and a host should've been enough for all our needs. I am yet to find a use case for wild cards.
+    * The struct Rule has three types handling the case of having rules per app and per host. From what I could understand, it eases implementation of "Drop for all apps". Though I guess same could be achieved by **abstracting this idea in controller/business layer instead of data layer**. The code for table view is difficult to understand because of the code handling all the different types.
+
+---
+
 # Sift app
 Sift shows you what every app on your phone is really doing. Uncover network traffic in real-time for every app on your phone. Create rules to block sites like ads and tracking pages.
 
