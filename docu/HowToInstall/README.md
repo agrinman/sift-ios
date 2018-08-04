@@ -31,7 +31,7 @@ $ cd sift-ios
 
 ## Update the submodules
 ```
-$ cd git submodule update --init --recursive
+$ git submodule update --init --recursive
 ```
 
 ## Open the project
