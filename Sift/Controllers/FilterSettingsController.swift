@@ -299,50 +299,6 @@ class FilterSettingsController: UITableViewController, UISearchBarDelegate {
         cell.appIdentifierLabel.text = rule.0.capitalized
         return cell
     }
-    
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        if !isSearching && rules.count == 2 {
-            return false
-        }
-        return true
-    }
-    
-    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let rules = isSearching ? filteredRules : self.rules;
-
-        let rule = rules[indexPath.section].1[indexPath.row]
-        
-        
-        let deleteAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Delete", handler: { (action, indexPath) in
-            
-            try? RuleManager().delete(rule: rule)
-            self.loadRules()
-        })
-        
-        deleteAction.backgroundColor = AppColors.deny.color
-
-        var actions = [deleteAction]
-
-        if rule.isAllowed {
-            let action = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Drop", handler: { (action, indexPath) in
-                
-                try? RuleManager().toggle(rule: rule)
-                self.loadRules()
-            })
-            action.backgroundColor = AppColors.deny.color
-            actions.append(action)
-        } else {
-            let action = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Allow", handler: { (action, indexPath) in
-                
-                try? RuleManager().toggle(rule: rule)
-                self.loadRules()
-            })
-            action.backgroundColor = AppColors.allow.color
-            actions.append(action)
-        }
-        
-        return actions
-    }
 }
 
 class AppNameCell: UITableViewCell {
