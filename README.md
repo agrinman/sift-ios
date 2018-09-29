@@ -73,7 +73,12 @@ Sift shows you what an app is doing by pushing a notification in real-time. Late
 It turns it out that network content filters are not permitted for regular app store apps (it only works in supervised device mode). So I decided to release the source code instead -- any donations are greatly appreciated :)
 
 ### How do I use it/install it?
-Make sure you have XCode installed. Clone the code, update submodule (`git submodule update --init --recursive`). Open the .xcodeproj, change development team to yours in app and extensions targets, find occurrences of string `in.alexgr.` in project (don't forget extenions!) and replace to your team's identifier. Now you could plug in your iPhone, and hit run. You might have to authorize XCode to deploy to your phone/ sign into iCloud in XCode.
+Make sure you have XCode installed. Clone the code, update submodule (`git submodule update --init --recursive`). Open the .xcodeproj file. Then:
+1. Change the development team to your own in both the app and extensions targets
+2. Search for occurences of  "`in.alexgr.`" in the project and replace each one with your own team identifier. 
+3. Connect your iDevice and hit run. 
+
+Note: you might have to authorize XCode to deploy to your device/sign into iCloud in XCode.
 
 You can find a [step-by-step workthrough in ". docu/HowToInstall/README.md"](./docu/HowToInstall/README.md)
 

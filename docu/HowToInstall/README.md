@@ -1,9 +1,11 @@
-# Howto install the Sift app
+# How to install the Sift app
 
 This was made with:
 * Xcode version 9.4.1
 * Git  2.15.2
 * MacOs 10.13.5 (High Sierra)
+
+(This howto doc was created by a @llabball) 
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -21,34 +23,23 @@ This was made with:
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## clone the repository
-Open the terminal and navigate to the destination folder.
-
-Then execute:
+## Clone the repo
 ```
 $ git clone git@github.com:agrinman/sift-ios.git
-```
-
-## clone the submodules
-
-Enter the new folder ...:
-```
 $ cd sift-ios
 ```
 
-... end download the dependencies:
+## Update the submodules
 ```
-$ cd git submodule update --init --recursive
+$ git submodule update --init --recursive
 ```
 
-## open repository in Xcode
+## Open the project
+```
+$ open Sift/Sift.xcodeproj
+```
 
-1. open Xcode
-2. click on `Open another project ...` (at the bottom)
-3. choose the `sift-ios` folder on your disk
-4. configure the project:
-
-### configure the target "Sift"
+## Update the "Sift", "SiftData", and "SiftControl" Targets
 
 * **alter the "Bundle identifier"**
 
@@ -68,11 +59,10 @@ $ cd git submodule update --init --recursive
 
 * **alter the name of the "app group"**
   
-  In the screenshot my group was already displayed because i've created the name in a run before. You've just to click the plus-sign. I've named my group `group.de.i8z.sift.shared`. You can choose whatever you want and have to use it in following configurations.
+  In the screenshot my group was already displayed because I've created the name in a run before. You've just to click the plus-sign. I've named my group `group.de.i8z.sift.shared`. You can choose whatever you want and have to use it in following configurations.
 
   ![](./imgs/04.png)
 
-### configure the target "SiftData"
 
 Repeat the steps from the configuration of the target "Sift".
 I've chosen
@@ -82,8 +72,6 @@ I've chosen
 * **App group**: same as in target "Sift"
 
 ![](./imgs/05.png)
-
-### configure the target "SiftData"
 
 Repeat the steps from the configuration of the target "Sift".
 I've chosen
