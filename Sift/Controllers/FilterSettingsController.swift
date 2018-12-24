@@ -40,18 +40,18 @@ class FilterSettingsController: UITableViewController, UISearchBarDelegate {
             pushControl.selectedSegmentIndex = 1
         }
         
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 120
         
         if let font = UIFont(name: "FiraSans-Regular", size: 16) {
-            UISegmentedControl.appearance().setTitleTextAttributes([NSAttributedStringKey.font: font], for: .normal)
+            UISegmentedControl.appearance().setTitleTextAttributes([NSAttributedString.Key.font: font], for: .normal)
             UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [
-                NSAttributedStringKey.font.rawValue: font,
-                NSAttributedStringKey.foregroundColor.rawValue: UIColor.white
+                NSAttributedString.Key.font: font,
+                NSAttributedString.Key.foregroundColor: UIColor.white
             ]
-            UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).attributedPlaceholder = NSAttributedString(string: "Filter apps and hosts", attributes: [NSAttributedStringKey.font: font, NSAttributedStringKey.foregroundColor: UIColor.lightGray])
+            UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).attributedPlaceholder = NSAttributedString(string: "Filter apps and hosts", attributes: [NSAttributedString.Key.font: font, NSAttributedString.Key.foregroundColor: UIColor.lightGray])
             
-            UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: font], for: .normal)
+            UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: font], for: .normal)
         }
     
         NotificationCenter.default.addObserver(self, selector: #selector(FilterSettingsController.reload), name: Constants.ObservableNotification.appBecameActive.name, object: nil)
@@ -354,7 +354,7 @@ class FilterSettingsController: UITableViewController, UISearchBarDelegate {
         let rule = rules[indexPath.section].1[indexPath.row]
         
         
-        let deleteAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Delete", handler: { (action, indexPath) in
+        let deleteAction = UITableViewRowAction(style: UITableViewRowAction.Style.default, title: "Delete", handler: { (action, indexPath) in
             
             try? RuleManager().delete(rule: rule)
             self.loadRules()
@@ -365,7 +365,7 @@ class FilterSettingsController: UITableViewController, UISearchBarDelegate {
         var actions = [deleteAction]
 
         if rule.isAllowed {
-            let action = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Drop", handler: { (action, indexPath) in
+            let action = UITableViewRowAction(style: UITableViewRowAction.Style.default, title: "Drop", handler: { (action, indexPath) in
                 
                 try? RuleManager().toggle(rule: rule)
                 self.loadRules()
@@ -373,7 +373,7 @@ class FilterSettingsController: UITableViewController, UISearchBarDelegate {
             action.backgroundColor = AppColors.deny.color
             actions.append(action)
         } else {
-            let action = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Allow", handler: { (action, indexPath) in
+            let action = UITableViewRowAction(style: UITableViewRowAction.Style.default, title: "Allow", handler: { (action, indexPath) in
                 
                 try? RuleManager().toggle(rule: rule)
                 self.loadRules()
@@ -427,7 +427,7 @@ class FilterSettingsController: UITableViewController, UISearchBarDelegate {
             }
 
             
-            alertController.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: { (action:UIAlertAction) -> Void in
+            alertController.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: { (action:UIAlertAction) -> Void in
                 
             }))
             

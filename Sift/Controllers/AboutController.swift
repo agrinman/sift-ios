@@ -17,7 +17,7 @@ class AboutController:UIViewController {
         super.viewDidLoad()
         self.navigationItem.setNavLogo()
 
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.action, target: self, action: #selector(AboutController.shareTapped))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.action, target: self, action: #selector(AboutController.shareTapped))
         
         if  let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
             self.versionLabel.text = "Version \(version)"
