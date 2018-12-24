@@ -15,8 +15,8 @@ extension UIViewController {
         DispatchQueue.main.async {
             
             let alertController:UIAlertController = UIAlertController(title: title, message: body,
-                                                                      preferredStyle: UIAlertControllerStyle.alert)
-            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action:UIAlertAction!) -> Void in
+                                                                      preferredStyle: UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (action:UIAlertAction!) -> Void in
                 then?()
             }))
             self.present(alertController, animated: true, completion: nil)
@@ -31,7 +31,7 @@ extension UIViewController {
         
         let settingsAction = UIAlertAction(title: "Settings", style: .default) { (alertAction) in
             
-            if let appSettings = URL(string: UIApplicationOpenSettingsURLString) {
+            if let appSettings = URL(string: UIApplication.openSettingsURLString) {
                 UIApplication.shared.open(appSettings, options: [:], completionHandler: nil)
             }
             
@@ -39,13 +39,13 @@ extension UIViewController {
         }
         alertController.addAction(settingsAction)
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) { (action) in
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel) { (action) in
             then?()
         }
         alertController.addAction(cancelAction)
         
         if let dndKey = dnd {
-            alertController.addAction(UIAlertAction(title: "Don't ask again", style: UIAlertActionStyle.destructive) { (action) in
+            alertController.addAction(UIAlertAction(title: "Don't ask again", style: UIAlertAction.Style.destructive) { (action) in
                 UserDefaults.standard.set(true, forKey: dndKey)
             })
             
@@ -58,16 +58,16 @@ extension UIViewController {
     
     func askConfirmationIn(title:String, text:String, accept:String, cancel:String, handler: @escaping ((_ confirmed:Bool) -> Void)) {
         
-        let alertController:UIAlertController = UIAlertController(title: title, message: text, preferredStyle: UIAlertControllerStyle.alert)
+        let alertController:UIAlertController = UIAlertController(title: title, message: text, preferredStyle: UIAlertController.Style.alert)
         
         
-        alertController.addAction(UIAlertAction(title: accept, style: UIAlertActionStyle.default, handler: { (action:UIAlertAction) -> Void in
+        alertController.addAction(UIAlertAction(title: accept, style: UIAlertAction.Style.default, handler: { (action:UIAlertAction) -> Void in
             
             handler(true)
             
         }))
         
-        alertController.addAction(UIAlertAction(title: cancel, style: UIAlertActionStyle.cancel, handler: { (action:UIAlertAction) -> Void in
+        alertController.addAction(UIAlertAction(title: cancel, style: UIAlertAction.Style.cancel, handler: { (action:UIAlertAction) -> Void in
             
             handler(false)
             
