@@ -58,30 +58,28 @@ extension AppRulesController: UITableViewDelegate {
       if rule.isAllowed {
         alertController.addAction(UIAlertAction(title: "Drop for \(app.commonName)", style: .destructive, handler: { (action:UIAlertAction) -> Void in
           try? RuleManager().toggle(rule: rule)
-
-          //                    self.loadRules()
+          self.tableView.reloadData()
         }))
 
         alertController.addAction(UIAlertAction(title: "Drop for all apps", style: .destructive, handler: { (action:UIAlertAction) -> Void in
           try? RuleManager().toggle(rule: rule)
           try? RuleManager().create(rule: Rule(ruleType: .host(host), isAllowed: false))
-          //                    self.loadRules()
+          self.tableView.reloadData()
         }))
       } else {
         alertController.addAction(UIAlertAction(title: "Allow for \(app.commonName)", style: .destructive, handler: { (action:UIAlertAction) -> Void in
           try? RuleManager().toggle(rule: rule)
-          //                    self.loadRules()
+          self.tableView.reloadData()
         }))
 
         alertController.addAction(UIAlertAction(title: "Allow for all apps", style: .destructive, handler: { (action:UIAlertAction) -> Void in
           try? RuleManager().toggle(rule: rule)
           try? RuleManager().create(rule: Rule(ruleType: .host(host), isAllowed: true))
-          //                    self.loadRules()
+          self.tableView.reloadData()
         }))
       }
 
       alertController.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: { (action:UIAlertAction) -> Void in
-
       }))
 
       self.present(alertController, animated: true, completion: nil)

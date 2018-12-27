@@ -191,17 +191,17 @@ class RuleManager {
     }
     
     func toggle(rule:Rule) throws  {
-        let (type, value) = rule.ruleType.typeAndValue
-        
-        guard let dataRule = try findDataRule(type: type, value: value) else {
-            throw Errors.noSuchRule
-        }
-        
         try performAndWait {
-            dataRule.isAllowed = !rule.isAllowed
-        }
+            let (type, value) = rule.ruleType.typeAndValue
         
-        try saveContext()
+          guard let dataRule = try self.findDataRule(type: type, value: value) else {
+                throw Errors.noSuchRule
+            }
+        
+            dataRule.isAllowed = !rule.isAllowed
+
+          try self.saveContext()
+        }
     }
 
     private func findDataRule(type:String, value:String) throws -> DataRule? {
